@@ -1,0 +1,16 @@
+[package]
+name = "vat"
+version = "0.1.0"
+authors = ["Vincent Prouillet <vincent@wearewizards.io>"]
+license = "MIT"
+readme = "README.md"
+description = "VAT number validation and VAT rates for the EU"
+homepage = "https://github.com/Keats/vat"
+repository = "https://github.com/Keats/vat"
+keywords = ["vat", "vies", "eu"]
+
+[dependencies]
+regex = "0.1"
+lazy_static = "0.2"
+quick-error = "1"
+hyper = "0.9"
