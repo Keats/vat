@@ -45,6 +45,8 @@ fn is_vat_number_valid(vat_number: &str) -> bool {
     }
 }
 ```
+Look at `src/errors.rs` for the kind of error that could happen.
+
 In the case above we are only doing verification but the `validate_vat_number` function will return
 the information for that company as the following struct:
 
