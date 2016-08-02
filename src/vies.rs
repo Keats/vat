@@ -1,6 +1,6 @@
-/// Call the VIES VAT API
-/// The api is often down (http://ec.europa.eu/taxation_customs/vies/monitoring.html)
-/// so don't count on the result of the validation too much
+// Call the VIES VAT API
+// The api is often down (http://ec.europa.eu/taxation_customs/vies/monitoring.html)
+// so don't count on the result of the validation too much
 use std::io::Read;
 
 use regex::Regex;
@@ -35,13 +35,13 @@ impl Company {
     fn from_api(body: &str) -> Company {
         // #yolo
         let country_code = Regex::new(r"<countryCode>(.*?)</countryCode>").unwrap()
-            .captures(&body).unwrap().at(1).unwrap();
+            .captures(body).unwrap().at(1).unwrap();
         let vat_number = Regex::new(r"<vatNumber>(.*?)</vatNumber>").unwrap()
-            .captures(&body).unwrap().at(1).unwrap();
+            .captures(body).unwrap().at(1).unwrap();
         let name = Regex::new(r"<name>(.*?)</name>").unwrap()
-            .captures(&body).unwrap().at(1).unwrap();
+            .captures(body).unwrap().at(1).unwrap();
         let address = Regex::new(r"<address>(?s)(.*?)(?-s)</address>").unwrap()
-            .captures(&body).unwrap().at(1).unwrap();
+            .captures(body).unwrap().at(1).unwrap();
 
         Company {
             country_code: country_code.to_string(),
