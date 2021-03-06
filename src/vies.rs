@@ -100,7 +100,10 @@ L-2338  LUXEMBOURG</address></checkVatResponse></soap:Body></soap:Envelope>
         assert_eq!(company.name, "AMAZON EUROPE CORE S.A R.L.".to_string());
         assert_eq!(company.country_code, "LU".to_string());
         assert_eq!(company.vat_number, "26375245".to_string());
-        assert_eq!(company.address, "5, RUE PLAETIS\nL-2338  LUXEMBOURG".to_string());
+        assert_eq!(
+            company.address,
+            "38, AVENUE JOHN F. KENNEDY\nL-1855  LUXEMBOURG".to_string()
+        );
     }
 
 }
